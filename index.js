@@ -9,6 +9,8 @@ const { dbConnection } = require('./database/config')
 const PORT = process.env.PORT || 3000
 app.use(cors())
 
+app.use(express.json())
+
 dbConnection()
 
 app.use('/api/database', require('./routes/database'));
